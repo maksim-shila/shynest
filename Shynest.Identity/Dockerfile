@@ -5,16 +5,16 @@ EXPOSE 58216
 
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /
-COPY ["Shynest.Identity.csproj", "Shynest.Identity/"]
-RUN dotnet restore "Shynest.Identity.csproj"
+COPY Shynest.Identity.csproj Shynest.Identity.csproj
+RUN dotnet restore Shynest.Identity.csproj
 COPY . .
-WORKDIR "/Shynest.Identity"
-RUN dotnet build "Shynest.Identity.csproj" -c Release -o /app/build
+WORKDIR /
+RUN dotnet build Shynest.Identity.csproj -c Release -o /app
 
 FROM build AS publish
-RUN dotnet publish "Shynest.Identity.csproj" -c Release -o /app/publish
+RUN dotnet publish Shynest.Identity.csproj -c Release -o /app
 
 FROM base AS final
 WORKDIR /app
-COPY --from=publish /app/publish .
+COPY --from=publish /app .
 ENTRYPOINT ["dotnet", "Shynest.Identity.dll"]
