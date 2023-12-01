@@ -1,0 +1,47 @@
+﻿* {
+    font-family: Arial;
+}
+
+.container {
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+.input {
+    font-size: 16px;
+    background-color: #fff;
+    width: 100%
+}
+
+.header {
+    color: #332600;
+    font-size: 30px;
+    text-align: center;
+}
+
+.button {
+    font-size: 16px;
+    background-color: #a191bd;
+    border-radius: 4px;
+    color: #332600;
+    width: 100%;
+}
+
+.block {
+    margin-top: 10px;
+}
+
+.swith-button {
+    margin-top: 8px;
+    font-size: 12px;
+    border-radius: 4px;
+    color: #332600;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
+
+.validation-error {
+    font-size: 12px;
+    color: darkred;
+}

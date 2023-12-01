@@ -1,0 +1,10 @@
+﻿version: "3.3"
+
+services:
+  identity-service:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    container_name: identity-service
+    ports:
+      - "5283:5283"
