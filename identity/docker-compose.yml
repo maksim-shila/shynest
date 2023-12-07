@@ -9,5 +9,6 @@ services:
     ports:
       - "7264:7264"
     environment:
+      - PathBase=/auth
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://+:7264

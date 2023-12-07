@@ -14,6 +14,9 @@ var app = builder.Build();
 
 app.InitializeDb();
 
+var pathBase = configuration.GetValue<string>("PathBase");
+app.UsePathBase(pathBase);
+
 app.UseStaticFiles(new StaticFileOptions
 {
     FileProvider = new PhysicalFileProvider(Path.Combine(app.Environment.ContentRootPath, "Styles")),

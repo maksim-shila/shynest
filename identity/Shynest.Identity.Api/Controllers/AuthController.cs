@@ -23,7 +23,7 @@ namespace Shynest.Identity.Controllers
         }
 
         [HttpGet]
-        [Route("/auth/login")]
+        [Route("/login")]
         public IActionResult Login(string? returnUrl)
         {
             var viewModel = new LoginViewModel { ReturnUrl = returnUrl };
@@ -31,7 +31,7 @@ namespace Shynest.Identity.Controllers
         }
 
         [HttpPost]
-        [Route("/auth/login")]
+        [Route("/login")]
         public async Task<IActionResult> Login(LoginViewModel viewModel)
         {
             if (!ModelState.IsValid)
@@ -61,7 +61,7 @@ namespace Shynest.Identity.Controllers
         }
 
         [HttpGet]
-        [Route("/auth/register")]
+        [Route("/register")]
         public IActionResult Register(string? returnUrl)
         {
             var viewModel = new RegisterViewModel { ReturnUrl = returnUrl };
@@ -69,7 +69,7 @@ namespace Shynest.Identity.Controllers
         }
 
         [HttpPost]
-        [Route("/auth/register")]
+        [Route("/register")]
         public async Task<IActionResult> Register(RegisterViewModel viewModel)
         {
             if (!ModelState.IsValid)
@@ -96,7 +96,7 @@ namespace Shynest.Identity.Controllers
         }
 
         [HttpPost]
-        [Route("/auth/logout")]
+        [Route("/logout")]
         public async Task<IActionResult> Logout(string logoutId)
         {
             await _signInManager.SignOutAsync();
