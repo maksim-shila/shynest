@@ -80,3 +80,6 @@ TestResults/
 coveragereport/
 
 .env
+
+tempkey.jwk
+Platinum.Auth*

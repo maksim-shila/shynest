@@ -1,0 +1,13 @@
+﻿version: "3.3"
+
+services:
+  identity-service:
+    build:
+      context: .
+      dockerfile: ./Shynest.Identity.Api/Dockerfile
+    container_name: identity-api
+    ports:
+      - "7264:7264"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:7264
