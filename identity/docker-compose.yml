@@ -10,6 +10,12 @@ services:
       - "7264:7264"
     environment:
       - Application__PathBase=/auth
-      - ConnectionStrings__Identity=server=192.168.68.100;port=3306;database=Identity;user=root;password=shynest_db_pass;
+      - ConnectionStrings__Identity=server=mysql;port=3306;database=Identity;user=root;password=shynest_db_pass;
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://+:7264
+    networks:
+      - shynest-apps
+
+networks:
+  shynest-apps:
+    external: true
