@@ -1,0 +1,24 @@
+﻿version: "3.3"
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: ./BuildYourHead.Api/Dockerfile
+    restart: always
+    ports:
+      - "8080:80"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:80
+      - ConnectionStrings__DefaultConnection=server=${DB_HOST};port=${DB_PORT};database=BuildYourHead;user=root;password=superadmin;
+      - ImageStorage__ConnectionString=server=${DB_HOST};port=${DB_PORT};database=BuildYourHead.Images;user=root;password=superadmin;
+
+  ui:
+    build: ./build-your-head-ui/
+    restart: always
+    ports:
+      - "3000:3000"
+    environment:
+      - REACT_APP_API_URL=${API_URL}
+      - REACT_APP_OIDC_URL=${}
