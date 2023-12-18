@@ -4,7 +4,7 @@ services:
   api:
     build:
       context: .
-      dockerfile: ./src/Shynest.Identity.Api/Dockerfile
+      dockerfile: ./src/Shynest.Identity.Server/Dockerfile
     container_name: identity-server
     ports:
       - "7264:7264"
