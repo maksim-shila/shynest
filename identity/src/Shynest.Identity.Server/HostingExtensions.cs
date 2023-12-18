@@ -42,6 +42,8 @@ internal static class HostingExtensions
             app.UseDeveloperExceptionPage();
         }
 
+        app.UseCookiePolicy();
+
         InitializeDatabase(app);
 
         app.UseCors(builder =>
