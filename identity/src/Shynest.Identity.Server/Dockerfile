@@ -4,7 +4,7 @@ EXPOSE 7264
 
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
-COPY ["src/Shynest.Identity.Server/Shynest.Identity.Server.csproj", "Shynest.Identity.Server/"]
+COPY ["Shynest.Identity.Server/Shynest.Identity.Server.csproj", "Shynest.Identity.Server/"]
 RUN dotnet restore "Shynest.Identity.Server/Shynest.Identity.Server.csproj"
 COPY . .
 WORKDIR "/src/Shynest.Identity.Server/"

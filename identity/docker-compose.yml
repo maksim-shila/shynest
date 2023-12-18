@@ -3,7 +3,7 @@
 services:
   api:
     build:
-      context: .
+      context: ./src
       dockerfile: ./src/Shynest.Identity.Server/Dockerfile
     container_name: identity-server
     ports:
