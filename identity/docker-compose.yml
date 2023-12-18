@@ -9,6 +9,7 @@ services:
     ports:
       - "7264:7264"
     environment:
-      - PathBase=/auth
+      - Application__PathBase=/auth
+      - ConnectionStrings__Identity=server=192.168.68.100;port=3306;database=Identity;user=root;password=shynest_db_pass;
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://+:7264
