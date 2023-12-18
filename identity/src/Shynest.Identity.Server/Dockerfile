@@ -1,8 +1,8 @@
-﻿FROM mcr.microsoft.com/dotnet/aspnet:7.0 AS base
+﻿FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS base
 WORKDIR /app
 EXPOSE 7264
 
-FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
+FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
 COPY ["Shynest.Identity.Server/Shynest.Identity.Server.csproj", "Shynest.Identity.Server/"]
 RUN dotnet restore "Shynest.Identity.Server/Shynest.Identity.Server.csproj"
