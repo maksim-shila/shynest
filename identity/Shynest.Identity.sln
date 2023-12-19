@@ -5,7 +5,7 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{15CDF1CA-FA14-4D9F-92D1-9D3EF496F124}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shynest.Identity.Server", "src\Shynest.Identity.Server\Shynest.Identity.Server.csproj", "{B4A6F340-637F-449C-8AA0-7C6A5349EFEC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shynest.Identity.Api", "src\Shynest.Identity.Api\Shynest.Identity.Api.csproj", "{B4A6F340-637F-449C-8AA0-7C6A5349EFEC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2B3200AE-4076-4F9E-B9F1-720DA4B0ED73}"
 	ProjectSection(SolutionItems) = preProject
