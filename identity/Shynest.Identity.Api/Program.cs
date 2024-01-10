@@ -1,6 +1,5 @@
 ﻿using Serilog;
 using Shynest.Identity.Api;
-using Shynest.Identity.Server;
 
 Log.Logger = new LoggerConfiguration()
     .WriteTo.Console()

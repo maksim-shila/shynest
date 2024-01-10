@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="67dc5587-afee-466c-a792-3a2e8216d701" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.Shynest.Identity.UI.dir/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.Shynest.Identity.UI.dir/.idea/indexLayout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.Shynest.Identity.UI.dir/.idea/projectSettingsUpdater.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.Shynest.Identity.UI.dir/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/logo192.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/logo512.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/robots.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/build.mjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Login.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Logout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/.idea.Shynest.Identity/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/.idea.Shynest.Identity/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shynest.Identity.sln" beforeDir="false" afterPath="$PROJECT_DIR$/../Shynest.Identity.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/Shynest.Identity.Api/Config.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Shynest.Identity.Api/Config.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/Shynest.Identity.Api/Controllers/AccountController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Shynest.Identity.Api/Controllers/AccountController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/Shynest.Identity.Api/Data/ApplicationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Shynest.Identity.Api/Data/ApplicationDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/Shynest.Identity.Api/Data/Migrations/Identity/ApplicationDb/20231218165121_InitialIdentityServerApplicationDbMigration.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Shynest.Identity.Api/Data/Migrations/Identity/ApplicationDb/20231218165121_InitialIdentityServerApplicationDbMigration.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/Shynest.Identity.Api/Data/Migrations/Identity/ApplicationDb/20231218165121_InitialIdentityServerApplicationDbMigration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Shynest.Identity.Api/Data/Migrations/Identity/ApplicationDb/20231218165121_InitialIdentityServerApplicationDbMigration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/Shynest.Identity.Api/Data/Migrations/Identity/ApplicationDb/ApplicationDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Shynest.Identity.Api/Data/Migrations/Identity/ApplicationDb/ApplicationDbContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/Shynest.Identity.Api/Data/Migrations/IdentityServer/ConfigurationDb/20231218113206_InitialIdentityServerConfigurationDbMigration.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Shynest.Identity.Api/Data/Migrations/IdentityServer/ConfigurationDb/20231218113206_InitialIdentityServerConfigurationDbMigration.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/Shynest.Identity.Api/Data/Migrations/IdentityServer/ConfigurationDb/20231218113206_InitialIdentityServerConfigurationDbMigration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Shynest.Identity.Api/Data/Migrations/IdentityServer/ConfigurationDb/20231218113206_InitialIdentityServerConfigurationDbMigration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/Shynest.Identity.Api/Data/Migrations/IdentityServer/ConfigurationDb/ConfigurationDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Shynest.Identity.Api/Data/Migrations/IdentityServer/ConfigurationDb/ConfigurationDbContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/Shynest.Identity.Api/Data/Migrations/IdentityServer/PersistedGrantDb/20231218113110_InitialIdentityServerPersistedGrantDbMigration.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Shynest.Identity.Api/Data/Migrations/IdentityServer/PersistedGrantDb/20231218113110_InitialIdentityServerPersistedGrantDbMigration.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/Shynest.Identity.Api/Data/Migrations/IdentityServer/PersistedGrantDb/20231218113110_InitialIdentityServerPersistedGrantDbMigration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Shynest.Identity.Api/Data/Migrations/IdentityServer/PersistedGrantDb/20231218113110_InitialIdentityServerPersistedGrantDbMigration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/Shynest.Identity.Api/Data/Migrations/IdentityServer/PersistedGrantDb/PersistedGrantDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Shynest.Identity.Api/Data/Migrations/IdentityServer/PersistedGrantDb/PersistedGrantDbContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/Shynest.Identity.Api/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/../Shynest.Identity.Api/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/Shynest.Identity.Api/HostingExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Shynest.Identity.Api/HostingExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/Shynest.Identity.Api/Models/ApplicationUser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Shynest.Identity.Api/Models/ApplicationUser.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/Shynest.Identity.Api/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Shynest.Identity.Api/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/Shynest.Identity.Api/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Shynest.Identity.Api/Properties/launchSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/Shynest.Identity.Api/Shynest.Identity.Api.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../Shynest.Identity.Api/Shynest.Identity.Api.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/Shynest.Identity.Api/TestUsers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Shynest.Identity.Api/TestUsers.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/Shynest.Identity.Api/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Shynest.Identity.Api/appsettings.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2ZuJn1zeE6n1p1SCEIxmsKXGUd0" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="ts.external.directory.path" value="D:\_work\shynest\identity\Shynest.Identity.UI\node_modules\typescript\lib" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.Attach debugger">
+    <configuration name="Attach debugger" type="JavascriptDebugType" uri="http://localhost:3000" useFirstLineBreakpoints="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="start" type="js.build_tools.npm" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="start" />
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="JavaScript Debug.Attach debugger" />
+      <item itemvalue="npm.start" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="67dc5587-afee-466c-a792-3a2e8216d701" name="Changes" comment="" />
+      <created>1703266193852</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1703266193852</updated>
+      <workItem from="1703266198773" duration="743000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+</project>

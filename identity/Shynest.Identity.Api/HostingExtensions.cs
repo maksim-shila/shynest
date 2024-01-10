@@ -15,8 +15,6 @@ internal static class HostingExtensions
 {
     public static WebApplication ConfigureServices(this WebApplicationBuilder builder)
     {
-        builder.Services.AddRazorPages();
-
         builder.Services.AddControllers();
 
         var mySqlVersion = new MySqlServerVersion("8.0.32");
@@ -85,12 +83,10 @@ internal static class HostingExtensions
             builder.AllowAnyHeader();
         });
 
-        app.UseStaticFiles();
         app.UseRouting();
         app.UseIdentityServer();
         app.UseAuthorization();
 
-        app.MapRazorPages().RequireAuthorization();
         app.MapControllers();
 
         return app;
