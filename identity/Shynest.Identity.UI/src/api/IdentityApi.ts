@@ -1,30 +1,38 @@
-﻿type LoginRequest = {
+﻿import axios, { CreateAxiosDefaults } from "axios";
+import { STATUS_CODES } from "http";
+
+type LoginRequest = {
     password: string;
     userName: string;
     returnUrl: string | null;
 }
 
 type LoginResponse = {
-    ok: boolean;
+    success: boolean;
     returnUrl?: string;
 }
 
-export async function postLogin(data: LoginRequest): Promise<LoginResponse> {
-    const response = await fetch("/api/login", {
-        body: JSON.stringify(data),
-        headers: {
-            "Content-Type": "application/json",
-        },
-        method: "POST",
-    });
+const config: CreateAxiosDefaults = {
+    baseURL: process.env.REACT_APP_API_URL,
+    headers: {
+        get: { "Accept": "application/json" },
+        post: { "Content-Type": "application/json" },
+        put: { "Content-Type": "application/json" }
+    }
+}
 
-    if (!response.ok) {
-        return {ok: response.ok}
+const client = axios.create(config); 
+
+export async function postLogin(data: LoginRequest): Promise<LoginResponse> {
+    const response = await client.post('/login', data);
+
+    if (response.status != 200) {
+        return { success: false }
     }
 
-    const {returnUrl} = await response.json()
+    const { returnUrl } = response.data;
     return {
-        ok: response.ok,
+        success: true,
         returnUrl: returnUrl
     }
 }

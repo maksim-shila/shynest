@@ -18,7 +18,7 @@ export default function Login() {
         }
         const response = await postLogin(data);
 
-        if (!response.ok) {
+        if (!response.success) {
             form.reset();
             return;
         }
