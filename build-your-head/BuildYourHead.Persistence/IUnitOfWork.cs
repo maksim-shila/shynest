@@ -1,13 +1,12 @@
 ﻿using BuildYourHead.Persistence.Repositories.Interfaces;
 
-namespace BuildYourHead.Persistence
+namespace BuildYourHead.Persistence;
+
+public interface IUnitOfWork
 {
-    public interface IUnitOfWork
-    {
-        IProductRepository Products { get; }
-        IProductImageRepository ProductImages { get; }
-        IRecipeRepository Recipes { get; }
-        IRecipeProductRepository RecipeProducts { get; }
-        void Save();
-    }
+    IProductRepository Products { get; }
+    IProductImageRepository ProductImages { get; }
+    IRecipeRepository Recipes { get; }
+    IRecipeProductRepository RecipeProducts { get; }
+    void Save();
 }

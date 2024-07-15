@@ -1,9 +1,8 @@
-﻿namespace BuildYourHead.Application.Exceptions
-{
-    public class AlreadyExistsException : Exception
-    {
-        public AlreadyExistsException() : base() { }
+﻿namespace BuildYourHead.Application.Exceptions;
 
-        public AlreadyExistsException(string message) : base(message) { }
+public class AlreadyExistsException : Exception
+{
+    public AlreadyExistsException(string message) : base(message)
+    {
     }
 }

@@ -35,7 +35,7 @@ public static class HostingExtensions
 
         builder.Services.AddSwaggerGen(options =>
         {
-            options.SwaggerDoc("v1", new OpenApiInfo { Title = "BuildYourHead.Api", Version = "v1" });
+            options.SwaggerDoc("v1", new OpenApiInfo {Title = "BuildYourHead.Api", Version = "v1"});
             options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
             {
                 In = ParameterLocation.Header,
@@ -67,6 +67,7 @@ public static class HostingExtensions
         builder.Services.AddOptions(configuration);
         builder.Services.AddPersistence();
         builder.Services.AddApplicationServices();
+        builder.Services.AddMappers();
         builder.Services.AddRequestHandlers();
 
         if (builder.Environment.IsDevelopment())

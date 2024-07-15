@@ -1,7 +1,6 @@
-﻿namespace BuildYourHead.Infrastructure.ImageStorage
+﻿namespace BuildYourHead.Infrastructure.ImageStorage;
+
+public class ImageStorageOptions
 {
-    public class ImageStorageOptions
-    {
-        public string ConnectionString { get; set; } = null!;
-    }
+    public string ConnectionString { get; set; } = null!;
 }

@@ -1,9 +1,8 @@
-﻿namespace BuildYourHead.Application.Dto
+﻿namespace BuildYourHead.Application.Dto;
+
+public class RecipeDto
 {
-    public class RecipeDto
-    {
-        public int Id { get; set; }
-        public string Name { get; set; } = "";
-        public string? Description { get; set; }
-    }
+    public int Id { get; set; }
+    public string Name { get; set; } = "";
+    public string? Description { get; set; }
 }

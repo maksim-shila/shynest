@@ -1,8 +1,7 @@
-﻿namespace BuildYourHead.Api.Middleware
+﻿namespace BuildYourHead.Api.Middleware;
+
+[Serializable]
+public class ErrorResponse
 {
-    [Serializable]
-    public class ErrorResponse
-    {
-        public string Error { get; set; } = "";
-    }
+    public string Error { get; set; } = "";
 }
