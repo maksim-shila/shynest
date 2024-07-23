@@ -18,6 +18,27 @@ namespace BuildYourHead.Persistence.Migrations
                 .HasAnnotation("ProductVersion", "7.0.2")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
+            modelBuilder.Entity("BuildYourHead.Persistence.Entities.ImageEntity", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<byte[]>("Content")
+                        .IsRequired()
+                        .HasColumnType("longblob")
+                        .HasColumnName("Content");
+
+                    b.Property<string>("Path")
+                        .IsRequired()
+                        .HasColumnType("longtext")
+                        .HasColumnName("Path");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Images", (string)null);
+                });
+
             modelBuilder.Entity("BuildYourHead.Persistence.Entities.ProductEntity", b =>
                 {
                     b.Property<int>("Id")

@@ -1,9 +1,8 @@
-﻿namespace BuildYourHead.Api.Exceptions
-{
-    public class ValidationException : Exception
-    {
-        public ValidationException() : base() { }
+﻿namespace BuildYourHead.Api.Exceptions;
 
-        public ValidationException(string message) : base(message) { }
+public class ValidationException : Exception
+{
+    public ValidationException(string message) : base(message)
+    {
     }
 }

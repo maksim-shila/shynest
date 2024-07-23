@@ -1,50 +1,49 @@
-﻿using BuildYourHead.Api.Controllers.Recipe.Requests;
+﻿using BuildYourHead.Api.Controllers.RequestHandlers.Recipe;
 using BuildYourHead.Api.Exceptions;
 using BuildYourHead.Application.Services;
 using Moq;
 
-namespace BuildYourHead.Tests.Controllers.Recipe.Requests
+namespace BuildYourHead.Tests.Controllers.Recipe.Requests;
+
+public class DeleteRecipeRequestHandlerTests
 {
-    public class DeleteRecipeRequestHandlerTests
+    [Fact]
+    public void Handle_ValidId_CallsRecipeServiceDelete()
     {
-        [Fact]
-        public void Handle_ValidId_CallsRecipeServiceDelete()
-        {
-            // Arrange
-            var recipeServiceMock = new Mock<IRecipeService>();
-            recipeServiceMock.Setup(s => s.Delete(It.IsAny<int>()));
-            var handler = new DeleteRecipeRequestHandler(recipeServiceMock.Object);
+        // Arrange
+        var recipeServiceMock = new Mock<IRecipeService>();
+        recipeServiceMock.Setup(s => s.Delete(It.IsAny<int>()));
+        var handler = new DeleteRecipeRequestHandler(recipeServiceMock.Object);
 
-            // Act
-            const int id = 2;
-            handler.Handle(id);
+        // Act
+        const int id = 2;
+        handler.Handle(id);
 
-            // Assert
-            recipeServiceMock.Verify(s => s.Delete(id));
-        }
+        // Assert
+        recipeServiceMock.Verify(s => s.Delete(id));
+    }
 
-        [Fact]
-        public void Handle_NegativeId_ThrowsValidationException()
-        {
-            // Arrange
-            var recipeServiceMock = new Mock<IRecipeService>();
-            var handler = new DeleteRecipeRequestHandler(recipeServiceMock.Object);
+    [Fact]
+    public void Handle_NegativeId_ThrowsValidationException()
+    {
+        // Arrange
+        var recipeServiceMock = new Mock<IRecipeService>();
+        var handler = new DeleteRecipeRequestHandler(recipeServiceMock.Object);
 
-            // Act, Assert
-            const int id = -1;
-            Assert.Throws<ValidationException>(() => handler.Handle(id));
-        }
+        // Act, Assert
+        const int id = -1;
+        Assert.Throws<ValidationException>(() => handler.Handle(id));
+    }
 
-        [Fact]
-        public void Handle_ZeroId_ThrowsValidationException()
-        {
-            // Arrange
-            var recipeServiceMock = new Mock<IRecipeService>();
-            var handler = new DeleteRecipeRequestHandler(recipeServiceMock.Object);
+    [Fact]
+    public void Handle_ZeroId_ThrowsValidationException()
+    {
+        // Arrange
+        var recipeServiceMock = new Mock<IRecipeService>();
+        var handler = new DeleteRecipeRequestHandler(recipeServiceMock.Object);
 
-            // Act, Assert
-            const int id = 0;
-            Assert.Throws<ValidationException>(() => handler.Handle(id));
-        }
+        // Act, Assert
+        const int id = 0;
+        Assert.Throws<ValidationException>(() => handler.Handle(id));
     }
 }

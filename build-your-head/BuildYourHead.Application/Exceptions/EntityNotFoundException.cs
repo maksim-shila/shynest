@@ -1,9 +1,8 @@
-﻿namespace BuildYourHead.Application.Exceptions
-{
-    public class EntityNotFoundException : Exception
-    {
-        public EntityNotFoundException() : base() { }
+﻿namespace BuildYourHead.Application.Exceptions;
 
-        public EntityNotFoundException(string message) : base(message) { }
+public class EntityNotFoundException : Exception
+{
+    public EntityNotFoundException(string message) : base(message)
+    {
     }
 }

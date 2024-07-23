@@ -1,23 +1,22 @@
-﻿using BuildYourHead.Api.Controllers.Recipe.Requests;
+﻿using BuildYourHead.Api.Controllers.RequestHandlers.Recipe;
 using BuildYourHead.Application.Services;
 using Moq;
 
-namespace BuildYourHead.Tests.Controllers.Recipe.Requests
+namespace BuildYourHead.Tests.Controllers.Recipe.Requests;
+
+public class GetRecipesRequestHandlerTests
 {
-    public class GetRecipesRequestHandlerTests
+    [Fact]
+    public void Handle_NoArgs_CallsRecipeServiceGetAll()
     {
-        [Fact]
-        public void Handle_NoArgs_CallsRecipeServiceGetAll()
-        {
-            // Arrange
-            var recipeServiceMock = new Mock<IRecipeService>();
-            var handler = new GetRecipesRequestHandler(recipeServiceMock.Object);
+        // Arrange
+        var recipeServiceMock = new Mock<IRecipeService>();
+        var handler = new GetRecipesRequestHandler(recipeServiceMock.Object);
 
-            // Act
-            handler.Handle();
+        // Act
+        handler.Handle();
 
-            // Assert
-            recipeServiceMock.Verify(s => s.GetAll());
-        }
+        // Assert
+        recipeServiceMock.Verify(s => s.GetAll());
     }
 }

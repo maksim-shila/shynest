@@ -1,8 +1,7 @@
-﻿namespace BuildYourHead.Application.Dto
+﻿namespace BuildYourHead.Application.Dto;
+
+public class ImageDto
 {
-    public class ImageDto
-    {
-        public int Id { get; set; }
-        public byte[] Content { get; set; } = Array.Empty<byte>();
-    }
+    public int Id { get; set; }
+    public byte[] Content { get; set; } = Array.Empty<byte>();
 }
