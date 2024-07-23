@@ -25,7 +25,7 @@ public class ProductController : ControllerBase
         return Ok(result);
     }
 
-    [HttpGet("{productId}")]
+    [HttpGet("{productId:int}")]
     public IActionResult Get([FromRoute] int productId)
     {
         var handler = GetRequestHandler<GetProductRequestHandler>();
@@ -33,7 +33,7 @@ public class ProductController : ControllerBase
         return Ok(result);
     }
 
-    [HttpPost("{productId}")]
+    [HttpPost("{productId:int}")]
     public IActionResult Post([FromRoute] int productId, UpdateProductRequest request)
     {
         var handler = GetRequestHandler<UpdateProductRequestHandler>();
@@ -41,7 +41,7 @@ public class ProductController : ControllerBase
         return Ok(result);
     }
 
-    [HttpDelete("{productId}")]
+    [HttpDelete("{productId:int}")]
     public IActionResult Delete([FromRoute] int productId)
     {
         var handler = GetRequestHandler<DeleteProductRequestHandler>();
@@ -49,7 +49,7 @@ public class ProductController : ControllerBase
         return Ok(result);
     }
 
-    [HttpPost("{productId}/image")]
+    [HttpPost("{productId:int}/image")]
     public IActionResult PostImage([FromRoute] int productId, PostProductImageRequest request)
     {
         var handler = GetRequestHandler<PostProductImageRequestHandler>();
@@ -57,7 +57,7 @@ public class ProductController : ControllerBase
         return Ok(result);
     }
 
-    [HttpGet("{productId}/image/primary")]
+    [HttpGet("{productId:int}/image/primary")]
     public IActionResult GetPrimaryImage([FromRoute] int productId)
     {
         var handler = GetRequestHandler<GetProductPrimaryImageRequestHandler>();

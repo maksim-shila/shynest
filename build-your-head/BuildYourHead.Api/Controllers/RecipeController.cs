@@ -26,7 +26,7 @@ public class RecipeController : ControllerBase
     }
 
 
-    [HttpGet("{recipeId}")]
+    [HttpGet("{recipeId:int}")]
     public IActionResult Get([FromRoute] int recipeId)
     {
         var handler = GetRequestHandler<GetRecipeRequestHandler>();
@@ -34,7 +34,7 @@ public class RecipeController : ControllerBase
         return Ok(result);
     }
 
-    [HttpPost("{recipeId}")]
+    [HttpPost("{recipeId:int}")]
     public IActionResult Post([FromRoute] int recipeId, UpdateRecipeRequest request)
     {
         var handler = GetRequestHandler<UpdateRecipeRequestHandler>();
@@ -42,7 +42,7 @@ public class RecipeController : ControllerBase
         return Ok(result);
     }
 
-    [HttpDelete("{recipeId}")]
+    [HttpDelete("{recipeId:int}")]
     public IActionResult Delete([FromRoute] int recipeId)
     {
         var handler = GetRequestHandler<DeleteRecipeRequestHandler>();

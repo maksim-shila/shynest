@@ -6,7 +6,7 @@ using ControllerBase = BuildYourHead.Api.Controllers.Core.ControllerBase;
 namespace BuildYourHead.Api.Controllers;
 
 [ApiController]
-[Route("/api/recipe/{recipeId}/product")]
+[Route("/api/recipe/{recipeId:int}/product")]
 public class RecipeProductController : ControllerBase
 {
     [HttpGet]
@@ -25,7 +25,7 @@ public class RecipeProductController : ControllerBase
         return Ok(result);
     }
 
-    [HttpDelete("{productId}")]
+    [HttpDelete("{productId:int}")]
     public IActionResult Delete([FromRoute] int recipeId, [FromRoute] int productId)
     {
         var handler = GetRequestHandler<DeleteRecipeProductsRequestHandler>();
