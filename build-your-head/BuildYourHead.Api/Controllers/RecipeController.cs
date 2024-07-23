@@ -1,17 +1,15 @@
 ﻿using BuildYourHead.Api.Controllers.RequestHandlers.Recipe;
 using BuildYourHead.Api.Controllers.Requests.Recipe;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ControllerBase = BuildYourHead.Api.Controllers.Core.ControllerBase;
 
 namespace BuildYourHead.Api.Controllers;
 
-[Authorize]
 [ApiController]
+[Route("api/recipe")]
 public class RecipeController : ControllerBase
 {
     [HttpGet]
-    [Route("/api/recipe/")]
     public IActionResult Get()
     {
         var handler = GetRequestHandler<GetRecipesRequestHandler>();
@@ -20,7 +18,6 @@ public class RecipeController : ControllerBase
     }
 
     [HttpPut]
-    [Route("/api/recipe/")]
     public IActionResult Put(AddRecipeRequest request)
     {
         var handler = GetRequestHandler<PutRecipeRequestHandler>();
@@ -29,8 +26,7 @@ public class RecipeController : ControllerBase
     }
 
 
-    [HttpGet]
-    [Route("/api/recipe/{recipeId:int}")]
+    [HttpGet("{recipeId}")]
     public IActionResult Get([FromRoute] int recipeId)
     {
         var handler = GetRequestHandler<GetRecipeRequestHandler>();
@@ -38,8 +34,7 @@ public class RecipeController : ControllerBase
         return Ok(result);
     }
 
-    [HttpPost]
-    [Route("/api/recipe/{recipeId:int}")]
+    [HttpPost("{recipeId}")]
     public IActionResult Post([FromRoute] int recipeId, UpdateRecipeRequest request)
     {
         var handler = GetRequestHandler<UpdateRecipeRequestHandler>();
@@ -47,8 +42,7 @@ public class RecipeController : ControllerBase
         return Ok(result);
     }
 
-    [HttpDelete]
-    [Route("/api/recipe/{recipeId:int}")]
+    [HttpDelete("{recipeId}")]
     public IActionResult Delete([FromRoute] int recipeId)
     {
         var handler = GetRequestHandler<DeleteRecipeRequestHandler>();

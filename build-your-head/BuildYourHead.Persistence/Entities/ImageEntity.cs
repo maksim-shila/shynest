@@ -1,8 +1,8 @@
-﻿namespace BuildYourHead.Infrastructure.ImageStorage;
+﻿namespace BuildYourHead.Persistence.Entities;
 
-public class Image
+public class ImageEntity
 {
-    internal int Id { get; set; }
+    public int Id { get; set; }
     public string Path { get; set; } = string.Empty;
     public byte[] Content { get; set; } = Array.Empty<byte>();
 }

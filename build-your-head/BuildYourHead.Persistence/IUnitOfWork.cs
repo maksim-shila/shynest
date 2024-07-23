@@ -8,5 +8,6 @@ public interface IUnitOfWork
     IProductImageRepository ProductImages { get; }
     IRecipeRepository Recipes { get; }
     IRecipeProductRepository RecipeProducts { get; }
+    IImageRepository Images { get; }
     void Save();
 }

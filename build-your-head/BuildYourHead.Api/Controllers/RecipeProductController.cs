@@ -1,17 +1,15 @@
 ﻿using BuildYourHead.Api.Controllers.RequestHandlers.RecipeProduct;
 using BuildYourHead.Api.Controllers.Requests.RecipeProduct;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ControllerBase = BuildYourHead.Api.Controllers.Core.ControllerBase;
 
 namespace BuildYourHead.Api.Controllers;
 
-[Authorize]
 [ApiController]
+[Route("/api/recipe/{recipeId}/product")]
 public class RecipeProductController : ControllerBase
 {
     [HttpGet]
-    [Route("/api/recipe/{recipeId:int}/product")]
     public IActionResult Get([FromRoute] int recipeId)
     {
         var handler = GetRequestHandler<GetRecipeProductsRequestHandler>();
@@ -20,7 +18,6 @@ public class RecipeProductController : ControllerBase
     }
 
     [HttpPut]
-    [Route("/api/recipe/{recipeId:int}/product")]
     public IActionResult Put([FromRoute] int recipeId, PutRecipeProductsRequest request)
     {
         var handler = GetRequestHandler<PutRecipeProductsRequestHandler>();
@@ -28,8 +25,7 @@ public class RecipeProductController : ControllerBase
         return Ok(result);
     }
 
-    [HttpDelete]
-    [Route("/api/recipe/{recipeId:int}/product/{productId:int}")]
+    [HttpDelete("{productId}")]
     public IActionResult Delete([FromRoute] int recipeId, [FromRoute] int productId)
     {
         var handler = GetRequestHandler<DeleteRecipeProductsRequestHandler>();

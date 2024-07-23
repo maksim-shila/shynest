@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace BuildYourHead.Persistence.Configurations;
 
-public class ProductConfiguration : IEntityTypeConfiguration<ProductEntity>
+internal class ProductConfiguration : IEntityTypeConfiguration<ProductEntity>
 {
     public void Configure(EntityTypeBuilder<ProductEntity> builder)
     {

@@ -1,5 +1,6 @@
 import axios, { AxiosError, AxiosInstance, AxiosResponse, CreateAxiosDefaults } from "axios";
 import { toast } from "react-toastify";
+import { GlobalConfig } from "../global-config";
 
 type MessageType = "info" | "success" | "warning" | "error";
 
@@ -42,7 +43,7 @@ export class ApiClientBase {
 
     constructor(token: string | null | undefined) {
         const config: CreateAxiosDefaults = {
-            baseURL: process.env.REACT_APP_API_URL,
+            baseURL: GlobalConfig.apiUrl,
             headers: {
                 "Authorization": `Bearer ${token}`,
                 get: { "Accept": "application/json" },

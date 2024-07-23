@@ -14,6 +14,7 @@ public class ApplicationContext : DbContext
     public DbSet<ProductImageEntity> ProductImages { get; set; } = null!;
     public DbSet<RecipeEntity> Recipes { get; set; } = null!;
     public DbSet<RecipeProductEntity> RecipeProducts { get; set; } = null!;
+    public DbSet<ImageEntity> Images { get; set; } = null!;
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -21,5 +22,6 @@ public class ApplicationContext : DbContext
         modelBuilder.ApplyConfiguration(new RecipeProductConfiguration());
         modelBuilder.ApplyConfiguration(new ProductConfiguration());
         modelBuilder.ApplyConfiguration(new ProductImageConfiguration());
+        modelBuilder.ApplyConfiguration(new ImageConfiguration());
     }
 }

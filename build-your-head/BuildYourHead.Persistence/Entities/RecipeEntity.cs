@@ -6,6 +6,6 @@ public class RecipeEntity
     public string Name { get; set; } = "";
     public string? Description { get; set; }
 
-    public virtual List<ProductEntity> Products { get; set; } = new List<ProductEntity>();
-    public virtual List<RecipeProductEntity> RecipeProducts { get; set; } = new List<RecipeProductEntity>();
+    public virtual List<ProductEntity> Products { get; set; } = new();
+    public virtual List<RecipeProductEntity> RecipeProducts { get; set; } = new();
 }

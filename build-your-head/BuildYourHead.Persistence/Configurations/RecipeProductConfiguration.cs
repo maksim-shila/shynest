@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace BuildYourHead.Persistence.Configurations;
 
-public class RecipeProductConfiguration : IEntityTypeConfiguration<RecipeProductEntity>
+internal class RecipeProductConfiguration : IEntityTypeConfiguration<RecipeProductEntity>
 {
     public void Configure(EntityTypeBuilder<RecipeProductEntity> builder)
     {

@@ -7,7 +7,7 @@ namespace BuildYourHead.Persistence.Repositories.Impl;
 
 internal class RecipeProductRepository : RepositoryBase<RecipeProductEntity, int>, IRecipeProductRepository
 {
-    public RecipeProductRepository(ApplicationContext context) : base(context)
+    public RecipeProductRepository(DbContext context) : base(context)
     {
     }
 

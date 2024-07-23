@@ -1,12 +1,13 @@
 ﻿using System.Collections.Immutable;
 using BuildYourHead.Persistence.Entities;
 using BuildYourHead.Persistence.Repositories.Interfaces;
+using Microsoft.EntityFrameworkCore;
 
 namespace BuildYourHead.Persistence.Repositories.Impl;
 
 internal class ProductImageRepository : RepositoryBase<ProductImageEntity, int>, IProductImageRepository
 {
-    public ProductImageRepository(ApplicationContext context) : base(context)
+    public ProductImageRepository(DbContext context) : base(context)
     {
     }
 

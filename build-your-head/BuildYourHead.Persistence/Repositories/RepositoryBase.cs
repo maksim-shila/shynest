@@ -2,9 +2,9 @@
 
 namespace BuildYourHead.Persistence.Repositories;
 
-internal class RepositoryBase<TEntity, TKey> : IRepository<TEntity, TKey> where TEntity : class
+public class RepositoryBase<TEntity, TKey> : IRepository<TEntity, TKey> where TEntity : class
 {
-    public RepositoryBase(ApplicationContext context)
+    protected RepositoryBase(DbContext context)
     {
         DbSet = context.Set<TEntity>();
     }

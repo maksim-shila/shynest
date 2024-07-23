@@ -1,6 +1,4 @@
-﻿version: "3.3"
-
-services:
+﻿services:
   api:
     build:
       context: .
@@ -12,13 +10,14 @@ services:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://+:80
       - ConnectionStrings__DefaultConnection=server=${DB_HOST};port=${DB_PORT};database=BuildYourHead;user=root;password=superadmin;
-      - ImageStorage__ConnectionString=server=${DB_HOST};port=${DB_PORT};database=BuildYourHead.Images;user=root;password=superadmin;
 
-  ui:
-    build: ./build-your-head-ui/
+  db:
+    image: mysql:5.7
     restart: always
-    ports:
-      - "3000:3000"
     environment:
-      - REACT_APP_API_URL=${API_URL}
-      - REACT_APP_OIDC_URL=${}
+      MYSQL_DATABASE: 'build-your-head'
+      MYSQL_ROOT_PASSWORD: 'superadmin'
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'

@@ -1,27 +1,28 @@
 ﻿using System.Text;
 using BuildYourHead.Application.Exceptions;
-using BuildYourHead.Infrastructure.ImageStorage;
+using BuildYourHead.Persistence;
 
 namespace BuildYourHead.Application.Services.Impl;
 
 public class ImageService : IImageService
 {
     private static readonly Encoding Encoding = Encoding.ASCII;
-    private readonly IImageStorage _storage;
+    private readonly IUnitOfWork _uow;
 
-    public ImageService(IImageStorage storage)
+    public ImageService(IUnitOfWork uow)
     {
-        _storage = storage;
+        _uow = uow;
     }
 
     public void Delete(IList<string> imagesPaths)
     {
-        _storage.Delete(imagesPaths);
+        _uow.Images.Delete(imagesPaths);
+        _uow.Save();
     }
 
     public string Get(string path)
     {
-        var image = _storage.Get(path);
+        var image = _uow.Images.Get(path);
         if (image == null)
         {
             throw new NotFoundException($"Image {path} not found");
@@ -33,6 +34,6 @@ public class ImageService : IImageService
     public string Upload(string imageBase64)
     {
         var bytes = Encoding.GetBytes(imageBase64);
-        return _storage.Upload(bytes).Path;
+        return _uow.Images.Upload(bytes).Path;
     }
 }

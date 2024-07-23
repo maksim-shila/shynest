@@ -13,7 +13,7 @@ public static class WebApplicationExtensions
         db.Database.Migrate();
     }
 
-    public static void UseCustomMiddlewares(this WebApplication app)
+    public static void UseExceptionHandlerMiddleware(this WebApplication app)
     {
         app.UseMiddleware<ExceptionHandlerMiddleware>();
     }

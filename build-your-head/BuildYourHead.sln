@@ -17,8 +17,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuildYourHead.Application", "BuildYourHead.Application\BuildYourHead.Application.csproj", "{D7C998CA-27D3-4B26-AF05-3122DE56BE0D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuildYourHead.Infrastructure", "BuildYourHead.Infrastructure\BuildYourHead.Infrastructure.csproj", "{6E7295AD-DA7B-4230-B7DB-E75C85ED7994}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildYourHead.Tests", "BuildYourHead.Tests\BuildYourHead.Tests.csproj", "{BFB8CDEC-31F7-40FB-A0B2-329E853F682E}"
 EndProject
 Global
@@ -39,10 +37,6 @@ Global
 		{D7C998CA-27D3-4B26-AF05-3122DE56BE0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D7C998CA-27D3-4B26-AF05-3122DE56BE0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D7C998CA-27D3-4B26-AF05-3122DE56BE0D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6E7295AD-DA7B-4230-B7DB-E75C85ED7994}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6E7295AD-DA7B-4230-B7DB-E75C85ED7994}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6E7295AD-DA7B-4230-B7DB-E75C85ED7994}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6E7295AD-DA7B-4230-B7DB-E75C85ED7994}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BFB8CDEC-31F7-40FB-A0B2-329E853F682E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BFB8CDEC-31F7-40FB-A0B2-329E853F682E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BFB8CDEC-31F7-40FB-A0B2-329E853F682E}.Release|Any CPU.ActiveCfg = Release|Any CPU

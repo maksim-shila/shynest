@@ -3,8 +3,6 @@ using BuildYourHead.Application.Mappers.Impl;
 using BuildYourHead.Application.Mappers.Interfaces;
 using BuildYourHead.Application.Services;
 using BuildYourHead.Application.Services.Impl;
-using BuildYourHead.Infrastructure.ImageStorage;
-using BuildYourHead.Infrastructure.ImageStorage.Db;
 using BuildYourHead.Persistence;
 using Microsoft.EntityFrameworkCore;
 
@@ -21,8 +19,6 @@ public static class ServiceProviderExtensions
     {
         services.AddTransient<IProductService, ProductService>();
         services.AddTransient<IRecipeService, RecipeService>();
-
-        services.AddTransient<IImageStorage, DbImageStorage>();
         services.AddTransient<IImageService, ImageService>();
     }
 
@@ -49,11 +45,6 @@ public static class ServiceProviderExtensions
         {
             options.UseMySql(connectionString, new MySqlServerVersion("8.0.32"));
         });
-    }
-
-    public static void AddOptions(this IServiceCollection services, IConfiguration configuration)
-    {
-        services.Configure<ImageStorageOptions>(configuration.GetSection("ImageStorage"));
     }
 
     private static void AddTransientAllChildrenOf<T>(this IServiceCollection services)

@@ -11,10 +11,11 @@ public class UnitOfWork : IUnitOfWork
         ProductImages = new ProductImageRepository(context);
         Recipes = new RecipeRepository(context);
         RecipeProducts = new RecipeProductRepository(context);
+        Images = new ImageRepository(context);
         Context = context;
     }
 
-    protected ApplicationContext Context { get; }
+    private ApplicationContext Context { get; }
 
     #region Repositories
 
@@ -22,6 +23,7 @@ public class UnitOfWork : IUnitOfWork
     public IProductImageRepository ProductImages { get; }
     public IRecipeRepository Recipes { get; }
     public IRecipeProductRepository RecipeProducts { get; }
+    public IImageRepository Images { get; }
 
     #endregion Repositories
 

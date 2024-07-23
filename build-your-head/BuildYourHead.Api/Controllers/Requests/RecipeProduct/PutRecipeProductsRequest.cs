@@ -2,5 +2,5 @@
 
 public class PutRecipeProductsRequest
 {
-    public IList<int> ProductsIds { get; set; } = new List<int>();
+    public IList<int> ProductsIds { get; set; } = Array.Empty<int>();
 }

@@ -6,11 +6,9 @@ import { GlobalContext } from "../../context/global-context";
 import { ProductViewModal } from "./components/product-view-modal";
 import { ProductsList } from "./components/products-list"
 import { ProductFormData } from "./models/product-form-data";
-import { useAuth } from "oidc-react";
 
 export const ProductsPage: React.FC = () => {
 
-    const auth = useAuth()
     const { $api } = React.useContext(GlobalContext);
 
     const [products, setProducts] = React.useState<Product[]>([]);
@@ -21,8 +19,7 @@ export const ProductsPage: React.FC = () => {
     React.useEffect(() => {
         document.title = "Products";
         fetchProducts();
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [auth]);
+    }, []);
 
     const fetchProducts = useLoader(async (): Promise<void> => {
         const response = await $api().Product.getAll().invoke();
